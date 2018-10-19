@@ -1,0 +1,40 @@
+# test schematic
+
+[[data]]
+id = "data-fav-soda"
+value = "mountain dew"
+
+[[env]]
+id = "env-Hello-World"
+key = "HW"
+value = "Hello World Fortress"
+targets = ["print-hw"]
+
+#[[run]]
+#id = "setup-1"
+#command = "/root/boom.sh"
+#args = ["a"]
+#
+#[[run]]
+#id = "setup-2"
+#command = "/root/boom.sh"
+#args = ["ugh"]
+#find = true
+
+[[script]]
+id = "print-hw"
+source = """
+echo $HW
+"""
+
+[[script]]
+id = "print-hw-2"
+source = """
+echo $HW
+"""
+
+[[script]]
+id = "print-hw-2"
+source = """
+echo "My favorite soda is #shared[data-fav-soda]"
+"""
